@@ -1,6 +1,7 @@
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+CCVideoManager is a simple Video playback manager that allows you to play videos on Cocos2dx frame work for Win32, Windows Metro and Windows Universal apps. Please note that cocos2dx already has an extension to playback videos on iOS and Android.
+
 
 ## Code Example
 
@@ -8,24 +9,21 @@ Show what the library does as concisely as possible, developers should be able t
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+On our current project, we needed display cut scenes during the game play. Since we were targeting Windows market, we really needed a video playback support on these platform. 
 
-## Installation
+## How to add CCVideoManager into your project
+- Copy and paste the CCMediaPlayer.h/.cpp and CCVideoManager.h/.cpp files into your project directory.
+- add the #include "CCMediaPlayer.h" into the the scene where you want to call the VideoManager
+- Use "CCVideoManager::Instance()->PlayVideo("fileDirectory/yourvideo");"
+- After the movie playback finishes itself, it will automaticly remove itself from the view.
+- Make sure to destroy the VideoManager before exiting the app by calling "CCVideoManager::Instance()->DestroyInstance();"
 
-Provide code examples and explanations of how to get the project.
+## How to run the project
+I integrated a simple demonstration code on to the default helloworld.app created by cocos2dx. 
 
-## API Reference
+#MoreInfo
+Compiled with Visual Studio 2015
+Cocos2dx engine 3.10 is used
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
-## Tests
 
-Describe and show how to run the tests with code examples.
-
-## Contributors
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
-
-## License
-
-A short snippet describing the license (MIT, Apache, etc.)
