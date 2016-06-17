@@ -9,7 +9,7 @@ On our current project we needed display cut scenes during the game play. Since 
 ## How to add CCVideoManager into your project
 - Copy and paste the CCMediaPlayer.h/.cpp and CCVideoManager.h/.cpp files into your project directory.
 - add the #include "CCVideoManager.h" into the the scene where you want to call the VideoManager
-- Use "CCVideoManager::Instance()->PlayVideo("fileDirectory/yourvideo");"
+- Use "CCVideoManager::Instance()->PlayVideo("fileDirectory/yourvideo");" to start playback.
 - After the movie playback finishes itself, it will automaticly remove itself from the view.
 - Make sure to destroy the VideoManager before exiting the app by calling "CCVideoManager::Instance()->DestroyInstance();"
 
